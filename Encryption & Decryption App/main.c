@@ -62,11 +62,11 @@ int main(int argc, const char * argv[]) {
     
     int key = 2;
     
-    printf("Non Encrypted Message: %s\n", willEncryptedMessage);
+    printf("Decrypted Message: %s\n", willEncryptedMessage);
     
     for (int i = 0; i < strlen(willEncryptedMessage); i++)
     {
-        if (!isspace(willEncryptedMessage[i]))
+        if (!isspace(willEncryptedMessage[i]))                  //Boşlukların yerine herhangi bir harf ataması yapılmaması için kullanılır.
         {
             willEncryptedMessage[i] = encryptedChar(willEncryptedMessage[i], key);
         }
